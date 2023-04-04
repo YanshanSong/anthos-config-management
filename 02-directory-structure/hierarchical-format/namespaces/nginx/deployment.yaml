@@ -1,0 +1,33 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: nginx
+  namespace: nginx
+  labels:
+    app: nginx
+  annotations:
+    configmanagement.gke.io/cluster-selector: selector-env-nginx
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: nginx
+  template:
+    metadata:
+      name: nginx
+      labels:
+        app: nginx
+    spec:
+      containers:
+        - name: main
+          image: nginx:latest
+          imagePullPolicy: IfNotPresent
+          resources:
+            limits:
+              cpu: "0.1"
+              memory: "100Mi"
+            requests:
+              cpu: "0.1"
+              memory: "100Mi"
+      restartPolicy: Always
+
