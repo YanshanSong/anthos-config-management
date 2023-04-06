@@ -6,7 +6,7 @@ metadata:
   labels:
     app: redis
   annotations:
-    configmanagement.gke.io/cluster-selector: selector-redis-nginx
+    configmanagement.gke.io/cluster-selector: selector-env-redis
 spec:
   replicas: 1
   selector:
