@@ -3,4 +3,4 @@ kind: Namespace
 metadata:
   name: redis
   annotations:
-    configmanagement.gke.io/cluster-selector: selector-env-redis
+    configmanagement.gke.io/cluster-selector: selector-env-xy
