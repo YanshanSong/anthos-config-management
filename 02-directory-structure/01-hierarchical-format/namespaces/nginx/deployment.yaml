@@ -6,7 +6,7 @@ metadata:
   labels:
     app: nginx
   annotations:
-    configmanagement.gke.io/cluster-selector: selector-env-nginx
+    configmanagement.gke.io/cluster-selector: selector-env-rb
 spec:
   replicas: 1
   selector:

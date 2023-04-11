@@ -3,4 +3,4 @@ kind: Kustomization
 resources:
   - ../../../base/redis
 commonAnnotations:
-  configmanagement.gke.io/cluster-selector: selector-env-redis
+  configmanagement.gke.io/cluster-selector: selector-env-xy
