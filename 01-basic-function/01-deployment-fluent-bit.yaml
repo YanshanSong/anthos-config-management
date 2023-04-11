@@ -2,7 +2,6 @@ apiVersion: apps/v1
 kind: Deployment
 metadata:
   name: fluent-bit
-  namespace: fluent-bit
   labels:
     app: fluent-bit
 spec:
@@ -22,9 +21,9 @@ spec:
           imagePullPolicy: IfNotPresent
           resources:
             limits:
-              cpu: "0.1"
-              memory: "100Mi"
+              cpu: "0.01"
+              memory: "10Mi"
             requests:
-              cpu: "0.1"
-              memory: "100Mi"
+              cpu: "0.01"
+              memory: "10Mi"
       restartPolicy: Always
