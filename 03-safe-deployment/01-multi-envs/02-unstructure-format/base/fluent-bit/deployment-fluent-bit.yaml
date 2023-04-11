@@ -1,0 +1,29 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: fluent-bit
+  labels:
+    app: fluent-bit
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: fluent-bit
+  template:
+    metadata:
+      name: fluent-bit
+      labels:
+        app: fluent-bit
+    spec:
+      containers:
+        - name: main
+          image: fluent-bit-image
+          imagePullPolicy: IfNotPresent
+          resources:
+            limits:
+              cpu: "0.01"
+              memory: "10Mi"
+            requests:
+              cpu: "0.01"
+              memory: "10Mi"
+      restartPolicy: Always
