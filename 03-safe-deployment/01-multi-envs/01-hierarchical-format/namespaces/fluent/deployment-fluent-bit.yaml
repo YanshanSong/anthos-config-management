@@ -18,7 +18,7 @@ spec:
     spec:
       containers:
         - name: main
-          image: fluent-bit-image
+          image: fluent/fluent-bit:2.0.10
           imagePullPolicy: IfNotPresent
           resources:
             limits:
