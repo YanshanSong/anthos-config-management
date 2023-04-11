@@ -1,8 +1,9 @@
 apiVersion: kustomize.config.k8s.io/v1beta1
 kind: Kustomization
 resources:
+  - namespace.yaml
   - deployment-fluent-bit.yaml
 images:
   - name: fluent-bit-image
     newName: fluent/fluent-bit
-    newTag: 2.0.11
+    newTag: 2.0.10
