@@ -6,7 +6,7 @@ metadata:
   labels:
     app: fluent-bit
   annotations:
-    configmanagement.gke.io/cluster-selector: selector-env-pro
+    configmanagement.gke.io/cluster-selector: selector-env-fat
 spec:
   replicas: 1
   selector:
@@ -20,7 +20,7 @@ spec:
     spec:
       containers:
         - name: main
-          image: fluent/fluent-bit:2.0.10
+          image: fluent/fluent-bit:2.0.11
           imagePullPolicy: IfNotPresent
           resources:
             limits:
